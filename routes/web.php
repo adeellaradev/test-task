@@ -22,7 +22,7 @@ use Inertia\Inertia;
 
 // routes/web.php
 
-
+///
 
 
 Route::get('/', function () {
@@ -34,7 +34,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('home', [PdfReaderController::class , 'index']);
+ 
 
  
 
