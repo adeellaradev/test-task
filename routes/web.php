@@ -23,6 +23,7 @@ use Inertia\Inertia;
 // routes/web.php
 
 ///
+////////////////
 
 
 Route::get('/', function () {
