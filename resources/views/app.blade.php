@@ -19,4 +19,10 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
+    <script>
+        window.env = {
+            stripeKey: "{{ config('services.stripe.key') }}"
+        };
+    </script>
+    
 </html>

@@ -88,14 +88,18 @@
       const isProcessing = ref(false);
       let stripe, cardElement;
       let modalPromiseResolve, modalPromiseReject;
-  
+      
+      const stripeKey = window.env.stripeKey; 
+
       onMounted(async () => {
-        stripe = await loadStripe('pk_test_51PsPeDImpHhc4Ni6pBqGGR84WfYug4wJJablOc6eAXsP72yjPTWbC9Kt9jnoOkbfg6tREpMwx5CG5TvR0H3WijSR00BwdOahJy');
+        stripe = await loadStripe(import.meta.env.VITE_STRIPE_KEY);
         const elements = stripe.elements();
         cardElement = elements.create('card');
         cardElement.mount('#card-element'); 
+        
       });
-  
+      
+
   
    
       const handleSubmit = async () => {
